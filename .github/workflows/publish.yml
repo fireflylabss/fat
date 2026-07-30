@@ -44,7 +44,7 @@ jobs:
       - name: Publish to AUR
         uses: KSXGitHub/github-actions-deploy-aur@v3.0.1
         with:
-          pkgname: ofat
+          pkgname: fat
           pkgbuild: ./packaging/aur/PKGBUILD
           commit_username: horizzon3507
           commit_email: horizzon3507@users.noreply.github.com

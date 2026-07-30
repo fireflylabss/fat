@@ -1,6 +1,6 @@
 # Maintainer: Gabriel <horizzon3507>
-pkgname=ofat
-pkgver=0.2.0
+pkgname=fat
+pkgver=0.1.1
 pkgrel=1
 pkgdesc='Fast, syntax-aware cat alternative written in Rust'
 arch=('x86_64')
@@ -17,7 +17,7 @@ build() {
 
 package() {
   cd "fat-$pkgver"
-  install -Dm755 target/release/ofat "$pkgdir/usr/bin/ofat"
+  install -Dm755 target/release/fat "$pkgdir/usr/bin/fat"
   install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
   install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
 }
