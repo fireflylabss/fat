@@ -20,7 +20,7 @@ sed -i "s/^pkgrel=.*/pkgrel=1/" "$PKGBUILD"
 sed -i "s/^sha256sums=.*/sha256sums=('${SHA}')/" "$PKGBUILD"
 
 cat > "$SRCINFO" <<EOF
-pkgbase = ofat
+pkgbase = fat
 	pkgdesc = Fast, syntax-aware cat alternative written in Rust
 	pkgver = ${VER}
 	pkgrel = 1
@@ -28,8 +28,8 @@ pkgbase = ofat
 	arch = x86_64
 	license = Apache-2.0
 	makedepends = cargo
-	source = ofat-${VER}.tar.gz::https://github.com/fireflylabss/fat/archive/refs/tags/v${VER}.tar.gz
+	source = fat-${VER}.tar.gz::https://github.com/fireflylabss/fat/archive/refs/tags/v${VER}.tar.gz
 	sha256sums = ${SHA}
 
-pkgname = ofat
+pkgname = fat
 EOF

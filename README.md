@@ -1,6 +1,6 @@
-# ◆ ofat
+# ◆ fat
 
-**ofat** — a fast, syntax-aware alternative to `cat`, written in Rust.
+**fat** — a fast, syntax-aware alternative to `cat`, written in Rust.
 
 Built in the spirit of `bat`: files get an informative header, a quiet gutter,
 line numbers and terminal-aware colors. It remains intentionally small and
@@ -11,7 +11,7 @@ local: no service, account, telemetry or configuration file is required.
   1 │ use std::io;
   2 │
   3 │ fn main() {
-  4 │     println!("hello from ofat");
+  4 │     println!("hello from fat");
   5 │ }
 ```
 
@@ -21,7 +21,7 @@ Requires Rust **1.85+**.
 
 ```bash
 cargo install ofat
-ofat src/main.rs
+fat src/main.rs
 ```
 
 From the checkout:
@@ -33,12 +33,12 @@ cargo run --release -- --style=full src/main.rs
 ## Usage
 
 ```bash
-ofat src/main.rs
-ofat --style=full Cargo.toml README.md
-ofat -n -r 20:60 src/main.rs
-curl -s https://example.com/snippet.rs | ofat -l rust -
-ofat --file-name settings.toml - < config
-ofat -pp README.md > README.txt
+fat src/main.rs
+fat --style=full Cargo.toml README.md
+fat -n -r 20:60 src/main.rs
+curl -s https://example.com/snippet.rs | fat -l rust -
+fat --file-name settings.toml - < config
+fat -pp README.md > README.txt
 ```
 
 | Option | Description |
@@ -59,7 +59,7 @@ terminal. Color automatically stays out of pipes, `NO_COLOR` is respected, and
 
 ## Philosophy
 
-ofat takes the useful surface of `bat` without trying to recreate every layer:
+fat takes the useful surface of `bat` without trying to recreate every layer:
 read files quickly, inspect a range, name data arriving through stdin and keep
 the Unix pipeline clean.
 
