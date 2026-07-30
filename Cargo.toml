@@ -1,17 +1,20 @@
 [package]
-name = "fat"
-version = "0.1.0"
+name = "ofat"
+version = "0.2.0"
 edition = "2024"
 rust-version = "1.85"
-description = "fat — a fast, syntax-aware cat alternative"
+description = "ofat — a fast, syntax-aware cat alternative"
 authors = ["AEFireflyLabs"]
 license = "Apache-2.0"
 readme = "README.md"
+repository = "https://github.com/fireflylabss/fat"
+homepage = "https://github.com/fireflylabss/fat"
+documentation = "https://docs.rs/ofat"
 keywords = ["cat", "terminal", "cli", "syntax-highlighting", "rust"]
 categories = ["command-line-utilities"]
 
 [[bin]]
-name = "fat"
+name = "ofat"
 path = "src/main.rs"
 
 [profile.release]

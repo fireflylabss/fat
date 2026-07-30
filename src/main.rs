@@ -75,7 +75,7 @@ fn main() -> ExitCode {
             if error.contains("Broken pipe") {
                 return ExitCode::SUCCESS;
             }
-            eprintln!("fat: {error}");
+            eprintln!("ofat: {error}");
             ExitCode::FAILURE
         }
     }
@@ -181,7 +181,7 @@ fn parse_args(args: Vec<String>) -> Result<Options, String> {
                 std::process::exit(0);
             }
             "-V" | "--version" => {
-                println!("fat {}", env!("CARGO_PKG_VERSION"));
+                println!("ofat {}", env!("CARGO_PKG_VERSION"));
                 std::process::exit(0);
             }
             value if value.starts_with('-') && value != "-" => {
@@ -545,7 +545,7 @@ fn highlight_markdown(line: &str) -> String {
 
 fn print_help() {
     print!(
-        "fat — a fast, syntax-aware cat alternative\n\nUSAGE:\n    fat [OPTIONS] [FILE]...\n\nWith no FILE, or FILE set to -, read standard input.\n\nOPTIONS:\n    -n, --number          Numbers only (like bat)\n    -p, --plain           Plain output; no decorations or colors\n    -l, --language <LANG> Select syntax explicitly\n    -r, --line-range N:M Print an inclusive line range\n        --style <STYLE>   default, full, header, numbers, plain\n        --file-name <NAME> Name stdin content for display and syntax\n        --paging <WHEN>   Pager: always, auto (default), never\n    -P                    Alias for --paging=never\n    -A, --show-all        Show spaces, tabs and line endings\n    -s, --squeeze-blank   Collapse consecutive blank lines\n        --color <WHEN>    Color: always, auto (default), never\n    -L, --list-languages  Print available language names\n        --list-themes     Print available color themes\n    -h, --help            Print this help\n    -V, --version         Print version\n\nEXAMPLES:\n    fat src/main.rs\n    fat --style=full -r 20:60 src/main.rs\n    curl -s https://example.com/code.rs | fat -l rust -n -\n"
+        "ofat — a fast, syntax-aware cat alternative\n\nUSAGE:\n    ofat [OPTIONS] [FILE]...\n\nWith no FILE, or FILE set to -, read standard input.\n\nOPTIONS:\n    -n, --number          Numbers only (like bat)\n    -p, --plain           Plain output; no decorations or colors\n    -l, --language <LANG> Select syntax explicitly\n    -r, --line-range N:M Print an inclusive line range\n        --style <STYLE>   default, full, header, numbers, plain\n        --file-name <NAME> Name stdin content for display and syntax\n        --paging <WHEN>   Pager: always, auto (default), never\n    -P                    Alias for --paging=never\n    -A, --show-all        Show spaces, tabs and line endings\n    -s, --squeeze-blank   Collapse consecutive blank lines\n        --color <WHEN>    Color: always, auto (default), never\n    -L, --list-languages  Print available language names\n        --list-themes     Print available color themes\n    -h, --help            Print this help\n    -V, --version         Print version\n\nEXAMPLES:\n    ofat src/main.rs\n    ofat --style=full -r 20:60 src/main.rs\n    curl -s https://example.com/code.rs | ofat -l rust -n -\n"
     );
 }
 
@@ -557,7 +557,7 @@ fn print_languages() {
 
 fn print_themes() {
     println!(
-        "default\nmonochrome\n\nfat follows your terminal palette; colors are disabled by --color=never, --plain, NO_COLOR, or redirected output in auto mode."
+        "default\nmonochrome\n\nofat follows your terminal palette; colors are disabled by --color=never, --plain, NO_COLOR, or redirected output in auto mode."
     );
 }
 
