@@ -3,5 +3,5 @@
 version = 4
 
 [[package]]
-name = "fat"
-version = "0.1.0"
+name = "ofat"
+version = "0.2.0"
