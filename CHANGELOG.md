@@ -26,3 +26,10 @@ Adopt optionSDK for color handling. This version was made for CLI on 12/08/2026 
 - Added `optionSDK` as the first shared-family dependency.
 - Use `option_sdk::color_enabled()` for `NO_COLOR` detection in auto color mode.
 - Bumped crate version from `0.1.1` to `0.1.2`.
+
+## v0.1.1 · 30/07/2026
+
+First public distribution with the `fat` binary and AUR packaging. This version was made for CLI on 30/07/2026 (v0.1.1).
+
+- Ship the binary as `fat` and correct the AUR package to match.
+- Added the crates.io + AUR publish workflow and AUR version-bump script.
