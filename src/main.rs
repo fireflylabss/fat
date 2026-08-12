@@ -88,7 +88,7 @@ fn run(args: Vec<String>) -> Result<(), String> {
         && match options.color {
             ColorChoice::Always => true,
             ColorChoice::Never => false,
-            ColorChoice::Auto => io::stdout().is_terminal() && env::var_os("NO_COLOR").is_none(),
+            ColorChoice::Auto => io::stdout().is_terminal() && option_sdk::color_enabled(),
         };
     let files = if options.files.is_empty() {
         vec!["-".to_owned()]

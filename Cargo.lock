@@ -4,4 +4,13 @@ version = 4
 
 [[package]]
 name = "ofat"
-version = "0.1.1"
+version = "0.1.2"
+dependencies = [
+ "optionSDK",
+]
+
+[[package]]
+name = "optionSDK"
+version = "0.1.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "e08d7bef833f1ce6ea916624d0007f251cb14e5c37ff26d910cf72ce857bced2"

@@ -1,6 +1,6 @@
 [package]
 name = "ofat"
-version = "0.1.1"
+version = "0.1.2"
 edition = "2024"
 rust-version = "1.85"
 description = "fat — a fast, syntax-aware cat alternative"
@@ -16,6 +16,9 @@ categories = ["command-line-utilities"]
 [[bin]]
 name = "fat"
 path = "src/main.rs"
+
+[dependencies]
+optionSDK = "0.1.2"
 
 [profile.release]
 lto = true
